@@ -8,7 +8,7 @@ import smtplib
 import random
 import wolframalpha
 
-client = wolframalpha.Client('8K346X-HPX972TA7G')
+client = wolframalpha.Client('API code')
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -60,8 +60,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('anthony.tacquet@gmail.com', 'Anthony2013')
-    server.sendmail('anthony.tacquet@gmail.com', to, content)
+    server.login('...@gmail.com', 'password')
+    server.sendmail('...@gmail.com', to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -83,7 +83,7 @@ if __name__ == "__main__":
             speak(hello1)
 
         elif "who are you" in query or "about you" in query or "your details" in query:
-            who_are_you = "I am Jarvis an A I based computer program but i can help you lot like a your assistant ! try me to give simple command !"
+            who_are_you = "I am Jarvis an A I based computer program but i can help you a lot like your assistant!"
             print(who_are_you)
             speak(who_are_you)
 
@@ -246,33 +246,33 @@ if __name__ == "__main__":
             print(live)
             speak(live)
 
-        elif 'email to Vincent' in query or "send an email to Vincent" in query or "send an eamil to papa" in query:
+        elif 'email to (name)' in query or "send an email to (name)" in query or "send an eamil to (name)" in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "vincent.tacquet@gmail.com"
+                to = "email1@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
                 speak("Sorry.... I am not able to send this email")
         
-        elif 'email to Evelyne' in query or "send an email to Evelyne" in query or "send an eamil to mama" in query:
+        elif 'email to (name)' in query or "send an email to (name)" in query or "send an eamil to (name)" in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "vanhyftee@gmail.com"
+                to = "email2@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
                 speak("Sorry.... I am not able to send this email")
 
-        elif 'email to Geoffrey' in query or "send an email to Geoffrey" in query:
+        elif 'email to (name)' in query or "send an email to (name)" in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "Geoffrey.tacquet@gmail.com"
+                to = "email3@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
