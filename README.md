@@ -1,8 +1,10 @@
 # Jarvis
 Jarvis desktop assistant
 
-This desktop assistant uses google wolfram alpha and wikipedia. you can do diverse things as; sending emails, etc...
+This desktop assistant uses google, wolfram alpha and wikipedia. you can do diverse things as; sending emails, etc...
 Its made on vs code.
+
+Things you might need to do first to be able to run jarvis!
 
 To install PyAudio on windows use this website https://www.lfd.uci.edu/~gohlke/pythonlibs/
 Go to PyAudio and chose your laptop bit version (amd64 or 32) and then chose your python version ex:
